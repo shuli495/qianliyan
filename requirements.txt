@@ -1,0 +1,5 @@
+beautifulsoup4==4.5.1
+Django==1.10.2
+django-cors-headers==1.2.2
+djangorestframework==3.4.7
+PyMySQL==0.7.9
