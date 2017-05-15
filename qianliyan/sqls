@@ -1,6 +1,0 @@
-DROP TABLE IF EXISTS `baidu_hanyu`;
-CREATE TABLE `baidu_hanyu` (
-  `hz` varchar(32) NOT NULL COMMENT '汉字',
-  `py` varchar(32) NOT NULL COMMENT '拼音',
-  PRIMARY KEY (`hz`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='百度汉语';

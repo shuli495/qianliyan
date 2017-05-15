@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
 from rest_framework.views import APIView
-from baidu_hanyu.models import BaiduHanyu
+from baidu_hanyu.models import baiduHanyu
 import urllib
 from bs4 import BeautifulSoup
 
@@ -12,7 +12,7 @@ class hanyu(APIView):
         hz = args[0]
 
         # 查询库中数据
-        hz_list = BaiduHanyu.objects.filter(hz=hz)
+        hz_list = baiduHanyu.objects.filter(hz=hz)
 
         return_pinyin = ""
 
@@ -29,7 +29,7 @@ class hanyu(APIView):
                 return_pinyin = soup.find(id="pinyin").b.string.replace("[","").replace("]","")
 
                 # 入库
-                BaiduHanyu.objects.create(hz=hz, py=return_pinyin)
+                baiduHanyu.objects.create(hz=hz, py=return_pinyin)
             except Exception:
                 return_pinyin = ""
 

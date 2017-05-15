@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'baidu_hanyu',
+    'pinyin',
 ]
 
 MIDDLEWARE = [
